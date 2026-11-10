@@ -1,0 +1,106 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Structorist</title>
+<meta name="description" content="A cozy, minimal city builder for iPad, in development. Draw roads, zone neighborhoods and watch your town grow.">
+<meta property="og:title" content="The Structorist">
+<meta property="og:description" content="A cozy, minimal city builder for iPad, in development.">
+<meta property="og:image" content="https://thestructorist.github.io/city.jpg">
+<meta name="theme-color" content="#eceae4">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%23eceae4'/%3E%3Cpath d='M4 20h24M16 4v24' stroke='%23fff' stroke-width='7'/%3E%3Cpath d='M4 20h24M16 4v24' stroke='%23b9b5aa' stroke-width='1.2' stroke-dasharray='2 2'/%3E%3Crect x='20' y='6' width='7' height='7' rx='1.5' fill='%2373c454'/%3E%3Crect x='5' y='24' width='7' height='5' rx='1.5' fill='%234a86e0'/%3E%3C/svg%3E">
+<style>
+  :root {
+    --ground: #eceae4;
+    --paper: #f7f6f2;
+    --ink: #2b2a27;
+    --muted: #6d6a62;
+    --road: #ffffff;
+    --edge: #c9c5bb;
+    --green: #73c454;
+    --blue: #4a86e0;
+    --water: #a6c1ef;
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--ground);
+    color: var(--ink);
+    font: 17px/1.55 -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+  }
+  main { max-width: 880px; margin: 0 auto; padding: 56px 20px 40px; }
+  header { display: flex; align-items: center; gap: 14px; }
+  .mark { width: 44px; height: 44px; flex: none; }
+  h1 { font-size: clamp(30px, 6vw, 44px); line-height: 1.1; margin: 0; letter-spacing: -0.02em; }
+  .tag { color: var(--muted); margin: 18px 0 28px; font-size: 19px; max-width: 34em; }
+  figure { margin: 0; }
+  .shot {
+    display: block; width: 100%; height: auto;
+    border-radius: 18px; border: 3px solid var(--road);
+    box-shadow: 0 0 0 1.5px var(--edge), 0 14px 40px rgba(60, 55, 40, 0.14);
+  }
+  figcaption { color: var(--muted); font-size: 14px; margin-top: 10px; }
+  section { margin-top: 40px; display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); }
+  .card { background: var(--paper); border-radius: 14px; padding: 18px 20px; box-shadow: 0 0 0 1px var(--edge); }
+  .card h2 { font-size: 16px; margin: 0 0 6px; display: flex; align-items: center; gap: 8px; }
+  .card p { margin: 0; color: var(--muted); font-size: 15px; }
+  .dot { width: 12px; height: 12px; border-radius: 3px; display: inline-block; }
+  .follow { margin-top: 44px; text-align: center; }
+  .follow p { color: var(--muted); margin: 0 0 14px; }
+  .links { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+  .links a {
+    color: var(--ink); text-decoration: none; font-weight: 600;
+    background: var(--road); border-radius: 999px; padding: 10px 22px;
+    box-shadow: 0 0 0 1.5px var(--edge);
+  }
+  .links a:hover { box-shadow: 0 0 0 2px var(--ink); }
+  footer { color: var(--muted); font-size: 13px; text-align: center; margin-top: 56px; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <svg class="mark" viewBox="0 0 44 44" aria-hidden="true">
+      <rect width="44" height="44" rx="11" fill="#f7f6f2" stroke="#c9c5bb" stroke-width="1.5"/>
+      <path d="M2 28h40M22 2v40" stroke="#fff" stroke-width="9"/>
+      <path d="M2 28h40M22 2v40" stroke="#c9c5bb" stroke-width="1.4" stroke-dasharray="3 3"/>
+      <rect x="28" y="8" width="10" height="10" rx="2" fill="#73c454"/>
+      <rect x="6" y="34" width="10" height="6" rx="2" fill="#4a86e0"/>
+    </svg>
+    <h1>The Structorist</h1>
+  </header>
+  <p class="tag">A cozy, minimal city builder for iPad, in development. Draw roads, zone neighborhoods and watch your town grow, one street at a time.</p>
+
+  <figure>
+    <img class="shot" src="city.jpg" width="1600" height="853" alt="Top-down view of a small city by a lake: a grid of streets with houses, shops and an industrial area, an avenue through the middle and a highway curving around it">
+    <figcaption>A test town by the lake, straight from the current build. All graphics are placeholders drawn in code.</figcaption>
+  </figure>
+
+  <section>
+    <div class="card">
+      <h2><span class="dot" style="background:#b9b5aa"></span>Roads that feel right</h2>
+      <p>Freehand, straight and curved roads made of calm lines and real arcs, with snapping you can switch on and off.</p>
+    </div>
+    <div class="card">
+      <h2><span class="dot" style="background:var(--green)"></span>A town that grows</h2>
+      <p>Zone homes, shops and industry. Lots fill up as demand rises and people move in.</p>
+    </div>
+    <div class="card">
+      <h2><span class="dot" style="background:var(--blue)"></span>Traffic you can watch</h2>
+      <p>Every car drives its own route, changes lanes, waits at stop lines and traffic lights.</p>
+    </div>
+  </section>
+
+  <div class="follow">
+    <p>Short devlogs with every update:</p>
+    <div class="links">
+      <a href="https://www.tiktok.com/@thestructorist" rel="me">TikTok</a>
+      <a href="https://www.instagram.com/thestructorist" rel="me">Instagram</a>
+    </div>
+  </div>
+
+  <footer>The Structorist · iPad · coming later</footer>
+</main>
+</body>
+</html>
